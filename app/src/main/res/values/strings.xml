@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GreenBot</string>
+
+    <string name="leaf_icon">Leaf Icon</string>
+    <string name="title">GreenBot</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="info">Info</string>
+    <string name="setting">Setting</string>
+    <string name="login_email">Email</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="water_instruction">Press leaf to water you plant!</string>
+    <string name="moisture_level_title">Plant Moisture Level</string>
+    <string name="sunlight_level_title">Sun Light Level</string>
+
+    <string name="title_activity_login_input">LoginInputActivity</string>
+    <string name="password_input">Password</string>
+</resources>

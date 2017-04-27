@@ -1,0 +1,93 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorButtonGreen"
+    tools:context="com.iot.ece.greenbot.LoginInputActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <android.support.percent.PercentRelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/leaf_icon_button"
+            app:layout_marginTopPercent="20%"
+            app:layout_heightPercent="30%"
+            app:layout_marginLeftPercent="25%"
+            app:layout_widthPercent="50%"
+            android:layout_gravity="center"
+            android:src="@drawable/leaf_icon_resized2"
+            android:shape="oval"
+            android:contentDescription="@string/leaf_icon"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            />
+
+
+        <TextView
+            android:id="@+id/fullscreen_content"
+            app:layout_marginTopPercent="55%"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:gravity="center_horizontal"
+            android:keepScreenOn="true"
+            android:text="@string/title"
+            android:textColor="#ffffff"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            tools:text="GreenBot"
+            android:fontFamily="sans-serif"
+            android:typeface="sans" />
+
+
+
+        <android.support.design.widget.TextInputLayout
+            app:layout_marginTopPercent="75%"
+            app:layout_widthPercent="90%"
+            app:layout_marginLeftPercent="5%"
+            app:layout_heightPercent="20%">
+
+            <EditText android:id="@+id/input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/login_email" />
+
+            <EditText android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/password_input"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <Button
+            android:text="@string/info"
+            android:theme="@style/MyButton"
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="10%"
+            app:layout_marginLeftPercent="50%"
+            app:layout_marginTopPercent="90%"
+            android:id="@+id/button_info"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="@string/setting"
+            android:theme="@style/MyButton"
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="10%"
+            app:layout_marginTopPercent="90%"
+            android:id="@+id/button_setting"
+            android:layout_weight="1" />
+
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+</FrameLayout>

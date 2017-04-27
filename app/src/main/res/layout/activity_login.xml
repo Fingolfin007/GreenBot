@@ -1,0 +1,74 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorButtonGreen"
+    tools:context="com.iot.ece.greenbot.LoginActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <android.support.percent.PercentRelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/leaf_icon_image"
+            app:layout_marginTopPercent="20%"
+            app:layout_heightPercent="30%"
+            app:layout_marginLeftPercent="25%"
+            app:layout_widthPercent="50%"
+            android:layout_gravity="center"
+            android:src="@drawable/leaf_icon_resized"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/leaf_icon" />
+
+        <TextView
+            android:id="@+id/fullscreen_content"
+            app:layout_marginTopPercent="55%"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:gravity="center_horizontal"
+            android:keepScreenOn="true"
+            android:text="@string/title"
+            android:textColor="#ffffff"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            tools:text="GreenBot"
+            android:fontFamily="sans-serif"
+            android:typeface="sans" />
+
+
+
+
+        <Button
+            android:text="@string/sign_up"
+            android:theme="@style/MyButton"
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="10%"
+            app:layout_marginLeftPercent="50%"
+            app:layout_marginTopPercent="90%"
+            android:id="@+id/button_signup"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="@string/login"
+            android:theme="@style/MyButton"
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="10%"
+            app:layout_marginTopPercent="90%"
+            android:id="@+id/button_login"
+            android:layout_weight="1" />
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+
+
+</FrameLayout>
