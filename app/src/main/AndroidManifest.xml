@@ -32,7 +32,8 @@
             android:label="@string/title_activity_login_input"
             android:theme="@style/FullscreenTheme" />
         <activity android:name=".TestActivity" />
-        <activity android:name=".InfoActivity"></activity>
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".SignUpActivity"></activity>
     </application>
 
 </manifest>

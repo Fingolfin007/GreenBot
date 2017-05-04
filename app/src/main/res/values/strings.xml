@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">GreenBot</string>
-
+    <string name="server_client_id">840970778208-vkns6872jo37hpqnrtdpvhgoi7aogh0d.apps.googleusercontent.com</string>
     <string name="leaf_icon">Leaf Icon</string>
     <string name="title">GreenBot</string>
     <string name="sign_up">Sign Up</string>
