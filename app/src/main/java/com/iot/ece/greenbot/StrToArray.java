@@ -4,6 +4,8 @@ package com.iot.ece.greenbot;
  * Created by xunda on 4/27/2017.
  */
 
+
+// convert a string like " 1 2 3 " to an array of floats
 import java.lang.Float;
 import java.util.*;
 

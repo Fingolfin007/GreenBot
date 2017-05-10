@@ -118,7 +118,7 @@ public class LstPaint {
         int start_pic_right=260;
 
 
-
+		// draw histogram
 
         for (int i=0;i<s;i++) {
             r.left = start_pic_left + i*110;
@@ -128,18 +128,6 @@ public class LstPaint {
             x.add( Float.valueOf(((float)(r.left+r.right))/2));
             y.add(Float.valueOf((float)r.top));
 
-
-
-
-//            this is for sunlight
-
-//            red= (int) ( 255 * ( nums[i] / 10 ) );
-//            red = red>255?red:255;
-//            green = 212-  (int) ( 222* ( nums[i] / 10 ) );
-//            blue = 34;
-
-
-            //this is for moisture
 
 
             blue= (int) ( 128 * ( nums[i] / 10 ) );
@@ -153,6 +141,8 @@ public class LstPaint {
             canvas.drawRect(r, paint);
         }
 
+		// draw curve
+
         int draw_end = (r.left+r.right)/2;
 
 
@@ -163,7 +153,6 @@ public class LstPaint {
 
         paint.setColor(Color.BLUE);
 
-//        paint.setColor(Color.YELLOW);
 
         for (int j= (start_pic_right+start_pic_left)/2;j<draw_end;j++) {
 
@@ -180,6 +169,8 @@ public class LstPaint {
 
         }
 
+
+		// draw title
 
         paint.setColor(Color.BLUE);
         paint.setTextSize(50);
