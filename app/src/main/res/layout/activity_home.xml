@@ -14,6 +14,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+        <Button
+            android:text="@string/info"
+            android:theme="@style/MyButton"
+            app:layout_widthPercent="100%"
+            app:layout_heightPercent="0%"
+            app:layout_marginLeftPercent="0%"
+            app:layout_marginTopPercent="0%"
+            android:id="@+id/button_signout"
+            android:layout_weight="1" />
+
         <ImageButton
             android:id="@+id/leaf_icon_button"
             app:layout_marginTopPercent="25%"

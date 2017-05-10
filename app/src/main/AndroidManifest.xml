@@ -33,7 +33,8 @@
             android:theme="@style/FullscreenTheme" />
         <activity android:name=".TestActivity" />
         <activity android:name=".InfoActivity" />
-        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".SchedulingActivity"></activity>
     </application>
 
 </manifest>

@@ -3,8 +3,10 @@
     <string name="server_client_id">840970778208-vkns6872jo37hpqnrtdpvhgoi7aogh0d.apps.googleusercontent.com</string>
     <string name="leaf_icon">Leaf Icon</string>
     <string name="title">GreenBot</string>
+    <string name="adjust_schedule">Adjust Schedule</string>
     <string name="sign_up">Sign Up</string>
     <string name="login">Login</string>
+    <string name="schedule_text">Select and Schedule</string>
     <string name="info">Info</string>
     <string name="setting">Setting</string>
     <string name="login_email">Email</string>

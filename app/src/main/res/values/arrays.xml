@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <string-array name="alarms">
+            <item>once per 5s </item>
+            <item>once per 10s </item>
+            <item>once per 30s </item>
+            <item>one per day </item>
+            <item>once per week </item>
+            <item>Cancel Scheduling</item>
+        </string-array>
+    </resources>

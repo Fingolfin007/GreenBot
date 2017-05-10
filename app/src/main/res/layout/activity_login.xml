@@ -43,9 +43,9 @@
         <com.google.android.gms.common.SignInButton
             android:text="@string/sign_up"
             android:theme="@style/MyButton"
-            app:layout_widthPercent="50%"
+            app:layout_widthPercent="100%"
             app:layout_heightPercent="10%"
-            app:layout_marginLeftPercent="50%"
+            app:layout_marginLeftPercent="0%"
             app:layout_marginTopPercent="90%"
             android:id="@+id/gbutton_signin"
             android:layout_weight="1"
@@ -57,7 +57,7 @@
         <Button
             android:text="@string/login"
             android:theme="@style/MyButton"
-            app:layout_widthPercent="50%"
+            app:layout_widthPercent="0%"
             app:layout_heightPercent="10%"
             app:layout_marginTopPercent="90%"
             android:id="@+id/button_login"

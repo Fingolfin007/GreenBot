@@ -4,6 +4,7 @@ import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PermissionGroupInfo;
+import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.animation.CycleInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -23,6 +25,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
+
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -35,8 +42,11 @@ public class HomeActivity extends AppCompatActivity {
     public ImageButton imageButton;
     public ProgressBar progressBar;
     public Button infoButton;
+    public Button settingButton;
     public TextView resultView;
+    public Button signoutButton;
     private static final int WATER_COLOR = 0xFF3171D8;
+    private GoogleApiClient googleApiClient;
     private static final String WATER_URL =
             "https://maker.ifttt.com/trigger/callPump/with/key/bbVY04YYbiLvYn8Jea_L0B";
 
@@ -111,11 +121,38 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        settingButton = (Button) findViewById(R.id.button_setting);
+        settingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent infoIntent = new Intent(HomeActivity.this, SchedulingActivity.class);
+                startActivity(infoIntent);
+            }
+        });
+
+        signoutButton = (Button) findViewById(R.id.button_signout);
+        signoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
 
 
     }
 
-    public void sendRequest() {
+    private void signout() {
+        Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
+            @Override
+            public void onResult(@NonNull Status status) {
+                Intent goIntent = new Intent(HomeActivity.this, LoginActivity.class);
+                startActivity(goIntent);
+            }
+        });
+    }
+
+    private void sendRequest() {
         HttpsTrustManager.allowAllSSL();
         RequestQueue mRequestQueue = Volley.newRequestQueue(this);
 
@@ -138,6 +175,7 @@ public class HomeActivity extends AppCompatActivity {
         );
         mRequestQueue.add(stringRequest4);
     }
+
 
 
 

@@ -86,17 +86,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 .build();
 
 
-        setContentView(R.layout.activity_login);
         mImageView = (ImageView) findViewById(R.id.leaf_icon_image);
 
-//        lg_button = (Button) findViewById(R.id.button_login);
-//        lg_button.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent finishIntent = new Intent(LoginActivity.this, HomeActivity.class);
-//                startActivity(finishIntent);
-//            }
-//            //}
-//        });
+        lg_button = (Button) findViewById(R.id.button_login);
+        lg_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent finishIntent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(finishIntent);
+            }
+            //}
+        });
 
 //        sg_button = (Button) findViewById(R.id.button_signup);
 //        sg_button.setOnClickListener(new View.OnClickListener() {
