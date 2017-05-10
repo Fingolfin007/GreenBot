@@ -36,6 +36,7 @@ import java.util.TimerTask;
 public class AlarmTask extends TimerTask {
 
     private Context con;
+	// this is for watering
     private static final String WATER_URL =
             "https://maker.ifttt.com/trigger/callPump/with/key/bbVY04YYbiLvYn8Jea_L0B";
 
@@ -47,70 +48,6 @@ public class AlarmTask extends TimerTask {
 
         HttpsTrustManager.allowAllSSL();
 
-        /****************https start ********************/
-
-
-
-//        URL url = null;
-//        try {
-//            url = new URL("https://en.wikipedia.org/wiki/Main_Page"); //https://maker.ifttt.com/trigger/callPump/with/key/bbVY04YYbiLvYn8Jea_L0B
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        }
-//
-//        String inputLine=null;
-//
-//        HttpURLConnection yc = null;
-//        try {
-//            yc = (HttpURLConnection) url.openConnection();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        System.out.println("Wait");
-//        int counter = 0;
-//        while(true)
-//        {
-//            boolean flag=false;
-//            try {
-//                yc = (HttpURLConnection) url.openConnection();
-//                if (yc.getResponseCode()==200)
-//                    flag=true;
-//            }
-//            catch (Exception e)
-//            { //
-//            };
-//            if (flag==true ) break;
-//            counter++;
-//            if (counter >= 1000) {
-//                break;
-//            }
-//        }
-//        System.out.println("W?");
-//
-//        BufferedReader in = null;
-//        try {
-//            in = new BufferedReader(  new InputStreamReader(yc.getInputStream()));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        try {
-//            while ((inputLine = in.readLine()) != null) {
-//                System.out.println(inputLine);
-//                break;
-//
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        try {
-//            in.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        System.out.println("What?");
-
-        /****************https end ********************/
 
         // Use this instead of the above https start-end block
         sendRequest();
@@ -136,12 +73,9 @@ public class AlarmTask extends TimerTask {
                         .setPriority(2).setSmallIcon(R.drawable.leaf_icon);
 
 
-        //.setSmallIcon(R.drawable.notification_icon)
 
 
 // Creates an explicit intent for an Activity in your app
-        //TODO
-        //MainActivity main change to another class
         Intent resultIntent = new Intent(con, SchedulingActivity.class);
 
 // The stack builder object will contain an artificial back stack for the
@@ -167,7 +101,6 @@ public class AlarmTask extends TimerTask {
 
         // go to android monitor to check
 
-        System.out.println("\nwait!\nShould work in background?");
 
         /**************try notification here *********************/
 
